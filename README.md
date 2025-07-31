@@ -46,7 +46,7 @@ The data and benchmark questions in this repository can be used to:
 The corpus is organized into transcript-chart pairs, and the benchmark questions are provided with their corresponding labels and correct answers. You can find the Python code for the 4-pipeline AI agent used in the original thesis in this repository. 
 
 ## Citation
-If you use the corpus or the evaluation benchmark in your research, please cite the following thesis:
+If you use the corpus or the evaluation benchmark in your research, please cite this GitHub repo along with the following thesis:
 
 ```latex
 @mastersthesis{sharma2025multimodal,
