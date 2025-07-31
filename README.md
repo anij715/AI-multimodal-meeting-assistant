@@ -1,6 +1,6 @@
 # AI-multimodal-meeting-assistant: A Multimodal Approach to Insight-Driven Meeting Summarization
 
-This repository contains the data corpus and evaluation benchmark from the Master's thesis, "A Multimodal Approach to Insight-Driven Meeting Summarization: Leveraging Speech and Visual Feedback for Enhanced Data Insight Capture," completed by Rizul Sharma at the University of Cincinnati in July 2025. 
+This repository contains the data corpus and evaluation benchmark from the Master's thesis, "A Multimodal Approach to Insight-Driven Meeting Summarization: Leveraging Speech and Visual Feedback for Enhanced Data Insight Capture," completed by Rizul Sharma at the University of Cincinnati.
 
 ## Project Overview
 This research explores the most effective methods for an AI agent to comprehend spoken conversations about data visualizations in meeting environments. The core contributions of this work are a novel multi-modal conversational corpus and a diagnostic evaluation framework designed to test an AI's understanding of these discussions. 
