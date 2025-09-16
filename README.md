@@ -46,15 +46,17 @@ The data and benchmark questions in this repository can be used to:
 The corpus is organized into transcript-chart pairs, and the benchmark questions are provided with their corresponding labels and correct answers. You can find the Python code for the 4-pipeline AI agent used in the original thesis in this repository. 
 
 ## Citation
-If you use the corpus or the evaluation benchmark in your research, please cite this GitHub repo along with the following thesis:
+If you use the corpus or the evaluation benchmark in your research, please cite this GitHub repo:
 
 ```latex
-@mastersthesis{sharma2025multimodal,
-  title={A Multimodal Approach to Insight-Driven Meeting Summarization: Leveraging Speech and Visual Feedback for Enhanced Data Insight Capture},
-  author={Sharma, Rizul},
-  school={University of Cincinnati},
-  year={2025},
-  month={July}
+@software{Sharma_AI-multimodal-meeting-assistant_A_Multimodal_2025,
+author = {Sharma, Rizul},
+month = jul,
+title = {{AI-multimodal-meeting-assistant: A Multimodal Approach to Insight-Driven Meeting Summarization}},
+url = {https://github.com/anij715/AI-multimodal-meeting-assistant},
+version = {1.0.0},
+year = {2025},
+note = {GitHub repository: https://github.com/anij715/AI-multimodal-meeting-assistant}
 }
 ```
 By citing this work, you acknowledge the effort involved in creating and validating these resources and help support the dissemination of this research. We hope this dataset and benchmark will be a valuable contribution to the community. 
