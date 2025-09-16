@@ -10,6 +10,3 @@ version: 1.0.0
 date-released: 2025-07-13
 repository-code: "https://github.com/anij715/AI-multimodal-meeting-assistant"
 url: "https://github.com/anij715/AI-multimodal-meeting-assistant"
-preferred-citation:
-  type: software
-  note: "GitHub repository: https://github.com/anij715/AI-multimodal-meeting-assistant"
