@@ -1,22 +1,13 @@
 cff-version: 1.2.0
-message: "If you use these contents, please cite as below."
+message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Sharma"
     given-names: "Rizul"
     orcid: "https://orcid.org/0009-0008-7025-0263"
+# The 'type' key is important to generate the correct BibTeX entry type.
+type: software 
 title: "AI-multimodal-meeting-assistant: A Multimodal Approach to Insight-Driven Meeting Summarization"
 version: 1.0.0
 date-released: 2025-07-13
 repository-code: "https://github.com/anij715/AI-multimodal-meeting-assistant"
 url: "https://github.com/anij715/AI-multimodal-meeting-assistant"
-note: "Github repository: https://github.com/anij715/AI-multimodal-meeting-assistant"
-references:
-  - type: "thesis"
-    authors:
-      - family-names: "Sharma"
-        given-names: "Rizul"
-    title: "A Multimodal Approach to Insight-Driven Meeting Summarization: Leveraging Speech and Visual Feedback for Enhanced Data Insight Capture"
-    institution:
-      name: "University of Cincinnati"
-    year: 2025
-    type: "mastersthesis"
