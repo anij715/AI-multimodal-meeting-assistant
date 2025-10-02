@@ -56,8 +56,22 @@ NOTE: For referencing which image directory is associated with which transcript 
 * part9 - images/Original language Distribution
 
 ## Citation
-If you use the corpus or the evaluation benchmark in your research, please cite this GitHub repo:
+If you use the corpus or the evaluation benchmark in your research, please cite the associated paper and this GitHub repo:
 
+Paper:
+```latex
+@misc{sharma2025aiagentsunderstandspoken,
+      title={Can AI agents understand spoken conversations about data visualizations in online meetings?}, 
+      author={Rizul Sharma and Tianyu Jiang and Seokki Lee and Jillian Aurisano},
+      year={2025},
+      eprint={2510.00245},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2510.00245}, 
+}
+```
+
+GitHub:
 ```latex
 @software{Sharma_AI-multimodal-meeting-assistant_A_Multimodal_2025,
 author = {Sharma, Rizul},
