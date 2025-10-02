@@ -56,7 +56,7 @@ NOTE: For referencing which image directory is associated with which transcript 
 * part9 - images/Original language Distribution
 
 ## Citation
-If you use the corpus or the evaluation benchmark in your research, please cite the associated paper and this GitHub repo:
+If you use the corpus or the evaluation benchmark in your research, please cite the [associated paper](https://arxiv.org/abs/2510.00245) and this GitHub repo:
 
 Paper:
 ```latex
