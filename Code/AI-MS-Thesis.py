@@ -26,7 +26,7 @@ from contextlib import redirect_stdout
 import io
 import functools
 
-# --- CONFIGURATION & SETUP ---
+# CONFIGURATION & SETUP
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -49,7 +49,7 @@ os.makedirs(CHART_IMG_DIR, exist_ok=True)
 text_model, text_tokenizer, text_device = None, None, None
 vlm_model, vlm_processor = None, None
 
-# --- Data Loading and Initial Setup ---
+# Data Loading and Initial Setup
 try:
     csv_url = "https://mailuc-my.sharepoint.com/:x:/g/personal/sharmarz_mail_uc_edu/Ef5POYmr8M1PoXaiJbh-QlEBLkKKf4K8AHwhm--qsSnixA?download=1"
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
@@ -73,7 +73,7 @@ except Exception as e:
     logging.fatal(f"FATAL: Could not download or process base CSV file for schema. Error: {e}")
     exit()
 
-# === HELPER FUNCTIONS ===
+# HELPER FUNCTIONS
 
 def load_transcript_from_file(file_path):
     if pd.isna(file_path) or not file_path or not os.path.exists(file_path): 
@@ -180,7 +180,7 @@ def sanitize_path_to_filename(path_str):
         return "invalid_path"
     return re.sub(r'[/\\.]', '_', path_str).replace('__py', '')
 
-# === CORE AI FUNCTIONS ===
+# CORE AI FUNCTIONS
 
 def initialize_text_model_once(model_name):
     global text_model, text_tokenizer, text_device
@@ -291,7 +291,7 @@ def generate_initial_chart_images(code_strings, base_filename):
 
     return output_paths
 
-# === PIPELINE FUNCTIONS ===
+# PIPELINE FUNCTIONS
 
 def analyze_initial_charts(mode, image_paths, code_strings, schema_str, stats_summary):
     num_items = len(image_paths if image_paths else code_strings)
@@ -411,7 +411,7 @@ Rationale: [Your detailed explanation]
     if mode in ['image_only', 'hybrid', 'llava_text_only']:
         image_list = image_paths if mode != 'llava_text_only' else []
         return generate_from_image_and_text(prompt, image_list)
-    else: # text_only (Mixtral)
+    else: # text_only
         # Text-only mode needs the text context for the chart, which isn't available here.
         # So we can't answer, but we can pass an empty prompt to get a "can't answer" response.
         return generate_text_locally(prompt)
@@ -440,7 +440,7 @@ def write_excel_file(df_dict, output_path, image_cols_map):
                                 except Exception as e:
                                     logging.error(f"Could not insert image {img_path}. Error: {e}")
 
-# === MAIN BATCH PROCESSING EXECUTION ===
+# MAIN BATCH PROCESSING EXECUTION
 
 def main():
     try:
@@ -458,7 +458,7 @@ def main():
         logging.fatal(f"FATAL: Input file not found or sheet missing at {INPUT_EXCEL_PATH}. Error: {e}")
         return
 
-    # --- STAGE 1: ANALYSIS ---
+    # STAGE 1: ANALYSIS
     logging.info("--- Starting Stage 1: Analysis ---")
     analysis_columns = ["transcript_name", "transcript_path", "chart_code_path", "initial_generated_chart_img", "prose_description", "heuristic_description", "chart_specification", "extracted_feedback", "suggested_chart_style_instruction"]
     analysis_results = {mode: [] for mode in ['image_only', 'text_only', 'llava_text_only', 'hybrid']}
@@ -502,7 +502,7 @@ def main():
     write_excel_file(analysis_dfs, ANALYSIS_OUTPUT_EXCEL_PATH, {'initial_generated_chart_img': 'D'})
     logging.info(f"--- Stage 1 Complete: Analysis results saved to {ANALYSIS_OUTPUT_EXCEL_PATH} ---")
 
-    # --- STAGE 2: TRANSCRIPT-BASED Q&A ---
+    # STAGE 2: TRANSCRIPT-BASED Q&A
     logging.info("--- Starting Stage 2: Transcript-Based Q&A ---")
     qa_columns = ["transcript_name", "chart_code_path", "question_asked", "option_a", "option_b", "option_c", "option_d", "pipeline_answer", "pipeline_rationale"]
     qa_results = {mode: [] for mode in analysis_results.keys()}
@@ -553,7 +553,7 @@ def main():
     logging.info(f"--- Stage 2 Complete: Q&A results saved to {QA_OUTPUT_EXCEL_PATH} ---")
 
 
-    # --- FINAL STAGE: MERGE for FINAL TRANSCRIPT-BASED OUTPUT ---
+    # FINAL STAGE: MERGE for FINAL TRANSCRIPT-BASED OUTPUT
     logging.info("--- Starting Final Stage: Merging Results into a Single File ---")
     
     final_transcript_dfs = {}
@@ -583,4 +583,5 @@ def main():
     logging.info(f"--- Pipeline Complete: Final transcript-based results saved to {FINAL_TRANSCRIPT_QA_PATH} ---")
 
 if __name__ == '__main__':
+
     main()
