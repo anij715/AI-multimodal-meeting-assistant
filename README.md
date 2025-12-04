@@ -46,14 +46,14 @@ The data and benchmark questions in this repository can be used to:
 The corpus is organized into transcript-chart pairs, and the benchmark questions are provided with their corresponding labels and correct answers. You can find the Python code for the 4-pipeline AI agent used in the original thesis in this repository. 
 
 NOTE: For referencing which image directory is associated with which transcript part for each session, use the following map:
-* part2 - images/Highest Grossing Movies
-* part3 - images/Avg Movie Revenue Over the Years
-* part4 - images/No. of Movies per Genre
-* part5 - images/Top 5 Movie Genres Over the Years
-* part6 - images/Boxplot
-* part7 - images/Distribution of Movie Ratings
-* part8 - images/Scatter Plot - Revenue vs Budget
-* part9 - images/Original language Distribution
+* part1 - images/Highest Grossing Movies
+* part2 - images/Avg Movie Revenue Over the Years
+* part3 - images/No. of Movies per Genre
+* part4 - images/Top 5 Movie Genres Over the Years
+* part5 - images/Boxplot
+* part6 - images/Distribution of Movie Ratings
+* part7 - images/Scatter Plot - Revenue vs Budget
+* part8 - images/Original language Distribution
 
 ## Citation
 If you use the corpus or the evaluation benchmark in your research, please cite the [associated paper](https://arxiv.org/abs/2510.00245) and this GitHub repo:
