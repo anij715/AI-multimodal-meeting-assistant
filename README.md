@@ -1,6 +1,6 @@
 # AI-multimodal-meeting-assistant: A Multimodal Approach to Insight-Driven Meeting Summarization
 
-This repository contains the data corpus and evaluation benchmark from the Master's thesis, "A Multimodal Approach to Insight-Driven Meeting Summarization: Leveraging Speech and Visual Feedback for Enhanced Data Insight Capture," completed by Rizul Sharma at the University of Cincinnati.
+This repository contains the data corpus, visualizations used, discrepancy document, python code, study slides and evaluation benchmark.
 
 ## Project Overview
 This research explores the most effective methods for an AI agent to comprehend spoken conversations about data visualizations in meeting environments. The core contributions of this work are a novel multi-modal conversational corpus and a diagnostic evaluation framework designed to test an AI's understanding of these discussions. 
@@ -32,7 +32,7 @@ This benchmark provides a robust method for evaluating an AI's comprehension of 
 
 * Dual-Axis Framework: The questions are labeled along two axes:
   * Comprehension Level: Categorizes questions by the cognitive depth required, from foundational recall to deep analytical reasoning.
-  * Area of Weakness: Pinpoints specific topics of discussion, such as "Chart Layout," "Data Provenance," or "Participant Hypothesis," to diagnose model failures. 
+  * Area of Weakness: Pinpoints specific topics of discussion, such as "Chart Properties," "Data Provenance," or "Participant Hypothesis," to diagnose model failures. 
 
 This framework moves beyond simple accuracy scores to provide a diagnostic understanding of a model's performance, identifying not just if a model fails, but why. 
 
